@@ -4,6 +4,10 @@ html, body {
 	height: 100%;
 }
 
+html {
+	overflow-y: auto !important;
+}
+
 body {
 	color: #333;
 	margin: 0;
