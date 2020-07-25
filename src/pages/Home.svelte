@@ -6,7 +6,8 @@ import { languages } from '../lib/languages.js'
 <main>
   <nav class="has-background-primary content">
     <h1>
-      <span class="has-text-white">CO</span>SHO<span class="has-text-white">DO</span>
+      <span class="has-text-white">MUNINN:code</span>
+      <span class="has-text-white">&nbsp;ver.1.0.0</span>
     </h1>
     <img src="/icons/setting.png" alt="設定">
   </nav>
