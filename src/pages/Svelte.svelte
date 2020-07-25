@@ -1,28 +1,16 @@
 <script>
 /* コンポーネント */
 import DetailLayout from '../components/DetailLayout.svelte'
-import ActionButton from '../components/parts/ActionButton.svelte'
-import CodeText from '../components/parts/CodeText.svelte'
-import TogglableCard from '../components/TogglableCard.svelte'
-import { Collapse } from 'svelma'
-import { getLanguage } from '../lib/languages.js'
+import { getLanguage, getNamesOnly } from '../lib/languages.js'
+import Svelte from '../lib/svelte.js'
+import { libs } from '../lib/svelte.js'
+import TogglableCodeCard from '../components/TogglableCodeCard.svelte'
 /* スクリプト */
 const lang = getLanguage('svelte')
 </script>
 
-<DetailLayout>
+<DetailLayout menus={ getNamesOnly(Svelte.datas) }>
   <span slot="content">
-    <TogglableCard title="導入" iconName="info">
-    <span slot="content">
-      <CodeText>npx degit sveltejs/template [[アプリ名]]</CodeText>
-    </span>
-    </TogglableCard>
-    <TogglableCard title="変数" iconName="info">
-      <span slot="content" class="content">
-        <CodeText>
-        </CodeText>
-      </span>
-    </TogglableCard>
     {#each Svelte.datas as svlt}
       <TogglableCodeCard title={ svlt.title } code={ svlt.content } />
     {/each}
@@ -32,5 +20,4 @@ const lang = getLanguage('svelte')
       <TogglableCodeCard title={ library.title } code={ library.content } />
     {/each}
   </span>
-  <ActionButton color={ lang.color } />
 </DetailLayout>

@@ -1,5 +1,5 @@
 <script>
-let isOpened = true
+export let isOpened
 const toggleContent = () => {
   isOpened = !isOpened
 }
