@@ -23,6 +23,14 @@ const lang = getLanguage('svelte')
         </CodeText>
       </span>
     </TogglableCard>
+    {#each Svelte.datas as svlt}
+      <TogglableCodeCard title={ svlt.title } code={ svlt.content } />
+    {/each}
+  </span>
+  <span slot="library">
+    {#each libs as library}
+      <TogglableCodeCard title={ library.title } code={ library.content } />
+    {/each}
   </span>
   <ActionButton color={ lang.color } />
 </DetailLayout>
