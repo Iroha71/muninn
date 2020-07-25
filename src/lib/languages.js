@@ -17,3 +17,11 @@ const findLanguageIndex = (targetName) => {
   }
   return targetIndex
 }
+
+export const getNamesOnly = (targetLangObject) => {
+  let names = []
+  targetLangObject.forEach(lang => {
+    names.push(lang.title)
+  });
+  return names
+}
