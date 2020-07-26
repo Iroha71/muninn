@@ -1,4 +1,11 @@
+<script>
+export let fileName
+</script>
+
 <span>
+  {#if fileName}
+    <p class="has-text-info">{ fileName }</p>
+  {/if}
   <pre><slot /></pre>
 </span>
 
