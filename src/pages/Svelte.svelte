@@ -17,7 +17,7 @@ const lang = getLanguage('svelte')
   </span>
   <span slot="library">
     {#each libs as library}
-      <TogglableCodeCard title={ library.title } code={ library.content } />
+      <TogglableCodeCard title={ library.title } code={ library.content } fileName={ library.fileName } />
     {/each}
   </span>
 </DetailLayout>
